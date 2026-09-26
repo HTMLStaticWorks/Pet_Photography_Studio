@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        studio: {
+                            50: '#faf6f3',
+                            100: '#f4ede6',
+                            200: '#ebd9cd',
+                            300: '#dfbcab',
+                            400: '#cf9881',
+                            500: '#c27b60',
+                            600: '#b5644a',
+                            700: '#98503b',
+                            800: '#7f4433',
+                            900: '#67392c',
+                            950: '#361b14',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>About Us - Paws & Pose | Pet Photography Studio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body class="bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100 transition-colors pt-20">
+
+    <header
+        class="fixed w-full top-0 z-50 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border-b border-gray-100 dark:border-neutral-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"
+                        class="flex items-center text-2xl font-bold text-studio-900 dark:text-studio-200">
+                        <i class="fas fa-paw text-studio-500 mr-2 text-2xl"></i>
+                        Paws & <span class="text-studio-500 ml-1">Pose</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html"
+                        class="text-gray-600 dark:text-gray-300 hover:text-studio-500 dark:hover:text-studio-400 font-medium transition-colors">Home</a>
+                    <a href="home-2.html"
+                        class="text-gray-600 dark:text-gray-300 hover:text-studio-500 dark:hover:text-studio-400 font-medium transition-colors">Home
+                        2</a>
+                    <a href="about.html"
+                        class="text-gray-600 dark:text-gray-300 hover:text-studio-500 dark:hover:text-studio-400 font-medium">About</a>
+                    <a href="blog.html"
+                        class="text-gray-600 dark:text-gray-300 hover:text-studio-500 dark:hover:text-studio-400 font-medium">Blog</a>
+                    <a href="dashboard.html"
+                        class="text-gray-600 dark:text-gray-300 hover:text-studio-500 dark:hover:text-studio-400 font-medium">Dashboard</a>
+                    <a href="contact.html"
+                        class="text-gray-600 dark:text-gray-300 hover:text-studio-500 dark:hover:text-studio-400 font-medium">Contact</a>
+                </nav>
+                <div class="hidden md:flex items-center space-x-4">
+                    <button
+                        class="theme-toggle w-10 h-10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-studio-500 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 shadow-sm hover:border-studio-300 dark:hover:border-studio-700 rounded-full transition-all focus:outline-none">
+                        <i class="fas fa-moon text-lg dark:hidden"></i>
+                        <i class="fas fa-sun text-lg hidden dark:block"></i>
+                    </button>
+                    <button
+                        class="rtl-toggle w-10 h-10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-studio-500 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 shadow-sm hover:border-studio-300 dark:hover:border-studio-700 rounded-full font-bold text-xs transition-all focus:outline-none">RTL</button>
+                    <a href="signup.html"
+                        class="bg-studio-600 hover:bg-studio-700 text-white px-5 py-2.5 rounded-full font-medium transition-colors">Sign
+                        Up</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn"
+                        class="text-gray-600 dark:text-gray-300 hover:text-studio-500 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white dark:bg-neutral-900 border-b border-gray-100 dark:border-neutral-800">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-studio-50 hover:text-studio-600 dark:hover:bg-neutral-800 rounded-md">Home</a>
+
+
+                <a href="about.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-studio-50 hover:text-studio-600 dark:hover:bg-neutral-800 rounded-md">About</a>
+                <a href="blog.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-studio-50 hover:text-studio-600 dark:hover:bg-neutral-800 rounded-md">Blog</a>
+                <a href="dashboard.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-studio-50 hover:text-studio-600 dark:hover:bg-neutral-800 rounded-md">Dashboard</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-studio-50 hover:text-studio-600 dark:hover:bg-neutral-800 rounded-md">Contact</a>
+                <div class="border-t border-gray-100 dark:border-neutral-800 pt-4 pb-2">
+                    <a href="signup.html"
+                        class="block px-3 py-2 text-base font-medium text-studio-600 dark:text-studio-400 hover:bg-studio-50 rounded-md">Sign
+                        Up</a>
+                </div>
+                <div class="flex space-x-4 px-3 py-2">
+                    <button class="theme-toggle w-10 h-10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-studio-500 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 shadow-sm hover:border-studio-300 dark:hover:border-studio-700 rounded-full transition-all focus:outline-none"><i class="fas fa-adjust"></i>
+                        Theme</button>
+                    <button class="rtl-toggle w-10 h-10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-studio-500 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 shadow-sm hover:border-studio-300 dark:hover:border-studio-700 rounded-full font-bold text-xs transition-all focus:outline-none"><i class="fas fa-exchange-alt"></i>
+                        RTL</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[60vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+                    alt="Photographer with dog in studio" class="w-full h-full object-cover opacity-90 dark:opacity-40">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-white/95 dark:from-neutral-900/95 via-white/70 dark:via-neutral-900/70 to-transparent">
+                </div>
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-24">
+                <div class="max-w-2xl">
+                    <span
+                        class="text-studio-600 dark:text-studio-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Our
+                        Story</span>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 text-neutral-900 dark:text-white">For the Love of
+                        <br><span class="text-studio-600 dark:text-studio-400">Paws & Whiskers</span></h1>
+                    <p class="text-lg text-neutral-700 dark:text-gray-300 leading-relaxed">We believe every pet has a
+                        unique soul that deserves to be celebrated. Our studio is dedicated to capturing the fleeting
+                        moments, the goofy smiles, and the quiet affection that makes your pet family.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Photographer -->
+        <section class="py-24 bg-studio-50 dark:bg-neutral-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="w-full lg:w-1/2">
+                        <div class="relative max-w-md mx-auto lg:mx-0">
+                            <img src="https://images.pexels.com/photos/4639085/pexels-photo-4639085.jpeg"
+                                alt="Lead Photographer"
+                                class="rounded-3xl shadow-xl relative z-10 aspect-[4/5] object-cover w-full">
+                            <div
+                                class="absolute -bottom-8 -right-8 w-64 h-64 bg-studio-200 dark:bg-studio-900/50 rounded-full mix-blend-multiply filter blur-2xl opacity-70 z-0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 space-y-6">
+                        <h2 class="text-4xl font-bold">Meet Jessica, Your Lead Photographer</h2>
+                        <h3 class="text-xl text-studio-600 dark:text-studio-400 font-medium">Over 10 years of capturing
+                            wagging tails and purrs.</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">"My journey into pet photography
+                            started with my own rescue pup, Barnaby. I realized that the photos I had of him were my
+                            most treasured possessions. I wanted to give other pet parents that same gift—high-quality,
+                            artistic images that capture the essence of their best friends."</p>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">With a background in fine art
+                            portraiture and animal behavior, Jessica knows exactly how to make your pet comfortable,
+                            ensuring their true personality shines through the lens.</p>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Her work has been featured in
+                            leading publications including <em>Modern Dog Magazine</em>. She is also a proud volunteer
+                            for local animal shelters, providing professional portraits to help rescue animals find
+                            their forever homes faster.</p>
+                        <div class="mt-8 flex gap-8 border-t border-gray-100 dark:border-neutral-800 pt-8">
+                            <div>
+                                <h4 class="text-3xl font-bold text-neutral-900 dark:text-white mb-1">500+</h4>
+                                <span class="text-sm text-gray-500 uppercase tracking-wide">Sessions</span>
+                            </div>
+                            <div>
+                                <h4 class="text-3xl font-bold text-neutral-900 dark:text-white mb-1">12</h4>
+                                <span class="text-sm text-gray-500 uppercase tracking-wide">Awards</span>
+                            </div>
+                            <div>
+                                <h4 class="text-3xl font-bold text-neutral-900 dark:text-white mb-1">100%</h4>
+                                <span class="text-sm text-gray-500 uppercase tracking-wide">Tails Wagging</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Philosophy -->
+        <section class="py-24 bg-white dark:bg-neutral-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold mb-16">Our Photography Philosophy</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="space-y-4">
+                        <div
+                            class="w-20 h-20 mx-auto bg-studio-50 dark:bg-studio-900/30 rounded-full flex items-center justify-center text-studio-600 dark:text-studio-400">
+                            <i class="fas fa-heart text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">Patience Above All</h3>
+                        <p class="text-gray-600 dark:text-gray-400">We work on your pet's schedule. There's no rushing.
+                            We wait for the moment they feel safe, relaxed, and ready to show their true colors.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div
+                            class="w-20 h-20 mx-auto bg-studio-50 dark:bg-studio-900/30 rounded-full flex items-center justify-center text-studio-600 dark:text-studio-400">
+                            <i class="fas fa-paint-brush text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">Artistic Intent</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Every session is styled and lit with purpose. We
+                            aren't just taking snapshots; we are creating heirloom artwork for your walls.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div
+                            class="w-20 h-20 mx-auto bg-studio-50 dark:bg-studio-900/30 rounded-full flex items-center justify-center text-studio-600 dark:text-studio-400">
+                            <i class="fas fa-paw text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">Safety First</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Whether in the studio or outdoors, your pet's
+                            physical and emotional safety is our absolute priority throughout the entire process.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Studio Experience -->
+        <section class="py-24 bg-neutral-950 text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <img src="https://images.unsplash.com/photo-1516222338250-863216ce01ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+                    alt="Studio Setup" class="w-full h-full object-cover">
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <h2 class="text-4xl font-bold">The Studio Experience</h2>
+                        <p class="text-gray-400 text-lg">Our custom-designed studio is built specifically for pets. From
+                            non-slip floors to quiet lighting equipment and an endless supply of treats, we've created
+                            an environment where magic happens.</p>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-studio-400 mt-1 mr-4"></i>
+                                Secure, enclosed space to prevent escapes.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-studio-400 mt-1 mr-4"></i>
+                                Professional grade, fast-sync strobes that don't frighten animals.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-studio-400 mt-1 mr-4"></i> A
+                                wardrobe of premium bandanas, bows, and collars.</li>
+                        </ul>
+                        <a href="contact.html"
+                            class="inline-block mt-4 bg-studio-600 hover:bg-studio-700 text-white px-8 py-4 rounded-full font-semibold transition-colors">Visit
+                            the Studio</a>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Dog in studio" class="rounded-2xl w-full h-64 object-cover">
+                        <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Cat in studio" class="rounded-2xl w-full h-64 object-cover mt-8">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Behind The Scenes -->
+        <section class="py-24 bg-studio-50 dark:bg-neutral-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold mb-4">Behind the Lens</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-16 max-w-2xl mx-auto">A sneak peek into the beautiful
+                    chaos of a typical pet portrait session.</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="https://images.unsplash.com/photo-1551730459-92db2a308d6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="BTS 1"
+                        class="rounded-xl aspect-square object-cover shadow-sm hover:scale-105 transition-transform duration-300">
+                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="BTS 2"
+                        class="rounded-xl aspect-square object-cover shadow-sm hover:scale-105 transition-transform duration-300">
+                    <img src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="BTS 3"
+                        class="rounded-xl aspect-square object-cover shadow-sm hover:scale-105 transition-transform duration-300">
+                    <img src="https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="BTS 4"
+                        class="rounded-xl aspect-square object-cover shadow-sm hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="bg-neutral-900 text-white pt-16 pb-8 border-t border-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="space-y-4">
+                    <a href="index.html" class="flex items-center text-2xl font-bold text-white">
+                        <i class="fas fa-paw text-studio-400 mr-2 text-2xl"></i>
+                        Paws & <span class="text-studio-400 ml-1">Pose</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Capturing the unique personality and soul of your beloved pets through premium studio and
+                        lifestyle photography.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                                class="fab fa-pinterest text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Home</a>
+                        </li>
+                        <li><a href="home-2.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Editorial Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors text-sm">About
+                                Us</a></li>
+                        <li><a href="blog.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Journal</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Studio
+                                Sessions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Outdoor
+                                Adventures</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Puppy
+                                Milestones</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Fine Art
+                                Prints</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-400 text-sm">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-studio-400"></i>
+                            123 Creative Studio Ave,<br>Art District, NY 10001
+                        </li>
+                        <li class="flex items-center text-gray-400 text-sm">
+                            <i class="fas fa-phone mr-3 text-studio-400"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li class="flex items-center text-gray-400 text-sm">
+                            <i class="fas fa-envelope mr-3 text-studio-400"></i>
+                            hello@pawspose.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-neutral-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 Paws & Pose Photography. All rights reserved.</p>
+                <div class="space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <button id="back-to-top"
+        class="hidden fixed bottom-8 right-8 z-50 bg-studio-600 hover:bg-studio-700 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-transform hover:-translate-y-1 focus:outline-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

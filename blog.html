@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        studio: {
+                            50: '#faf6f3',
+                            100: '#f4ede6',
+                            200: '#ebd9cd',
+                            300: '#dfbcab',
+                            400: '#cf9881',
+                            500: '#c27b60',
+                            600: '#b5644a',
+                            700: '#98503b',
+                            800: '#7f4433',
+                            900: '#67392c',
+                            950: '#361b14',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Journal - Paws & Pose | Pet Photography</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body class="bg-[#f9f8f6] dark:bg-neutral-900 text-gray-900 dark:text-gray-100 transition-colors pt-20">
+    
+    <header class="fixed w-full top-0 z-50 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border-b border-gray-100 dark:border-neutral-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center text-2xl font-bold text-studio-900 dark:text-studio-200">
+                        <i class="fas fa-paw text-studio-500 mr-2 text-2xl"></i>
+                        Paws & <span class="text-studio-500 ml-1">Pose</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-studio-500 dark:hover:text-studio-400 font-medium transition-colors">Home</a>
+                    <a href="home-2.html" class="text-gray-600 dark:text-gray-300 hover:text-studio-500 dark:hover:text-studio-400 font-medium transition-colors">Home 2</a>
+                    <a href="about.html" class="text-gray-600 dark:text-gray-300 hover:text-studio-500 dark:hover:text-studio-400 font-medium">About</a>
+                    <a href="blog.html" class="text-gray-600 dark:text-gray-300 hover:text-studio-500 dark:hover:text-studio-400 font-medium">Blog</a>
+                                        <a href="dashboard.html" class="text-gray-600 dark:text-gray-300 hover:text-studio-500 dark:hover:text-studio-400 font-medium">Dashboard</a>
+                    <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-studio-500 dark:hover:text-studio-400 font-medium">Contact</a>
+                </nav>
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="theme-toggle w-10 h-10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-studio-500 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 shadow-sm hover:border-studio-300 dark:hover:border-studio-700 rounded-full transition-all focus:outline-none">
+                        <i class="fas fa-moon text-lg dark:hidden"></i>
+                        <i class="fas fa-sun text-lg hidden dark:block"></i>
+                    </button>
+                    <button class="rtl-toggle w-10 h-10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-studio-500 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 shadow-sm hover:border-studio-300 dark:hover:border-studio-700 rounded-full font-bold text-xs transition-all focus:outline-none">RTL</button>
+                    <a href="signup.html" class="bg-studio-600 hover:bg-studio-700 text-white px-5 py-2.5 rounded-full font-medium transition-colors">Sign Up</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 dark:text-gray-300 hover:text-studio-500 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-neutral-900 border-b border-gray-100 dark:border-neutral-800">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-studio-50 hover:text-studio-600 dark:hover:bg-neutral-800 rounded-md">Home</a>
+                
+                    
+                <a href="about.html" class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-studio-50 hover:text-studio-600 dark:hover:bg-neutral-800 rounded-md">About</a>
+                <a href="blog.html" class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-studio-50 hover:text-studio-600 dark:hover:bg-neutral-800 rounded-md">Blog</a>
+                                <a href="dashboard.html" class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-studio-50 hover:text-studio-600 dark:hover:bg-neutral-800 rounded-md">Dashboard</a>
+                <a href="contact.html" class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-studio-50 hover:text-studio-600 dark:hover:bg-neutral-800 rounded-md">Contact</a>
+                <div class="border-t border-gray-100 dark:border-neutral-800 pt-4 pb-2">
+                    <a href="signup.html" class="block px-3 py-2 text-base font-medium text-studio-600 dark:text-studio-400 hover:bg-studio-50 rounded-md">Sign Up</a>
+                </div>
+                <div class="flex space-x-4 px-3 py-2">
+                    <button class="theme-toggle w-10 h-10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-studio-500 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 shadow-sm hover:border-studio-300 dark:hover:border-studio-700 rounded-full transition-all focus:outline-none"><i class="fas fa-adjust"></i> Theme</button>
+                    <button class="rtl-toggle w-10 h-10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-studio-500 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 shadow-sm hover:border-studio-300 dark:hover:border-studio-700 rounded-full font-bold text-xs transition-all focus:outline-none"><i class="fas fa-exchange-alt"></i> RTL</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+    <main>
+        <!-- Blog Hero -->
+        <section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden py-24 border-b border-gray-100 dark:border-neutral-800">
+            <div class="absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Dogs playing" class="w-full h-full object-cover opacity-80 dark:opacity-40">
+                <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-neutral-950 via-white/70 dark:via-neutral-950/70 to-white/30 dark:to-neutral-950/30"></div>
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-5xl md:text-6xl font-serif font-bold mb-6 text-neutral-900 dark:text-white">The Pet Portrait Journal</h1>
+                <p class="text-xl text-neutral-700 dark:text-gray-300 max-w-2xl mx-auto font-medium shadow-sm">Stories from the studio, photography tips for pet parents, and behind-the-scenes magic.</p>
+            </div>
+        </section>
+
+        <!-- Featured Article -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white dark:bg-neutral-950 rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-neutral-800 flex flex-col md:flex-row group">
+                    <div class="w-full md:w-1/2 overflow-hidden relative min-h-[300px] md:min-h-full">
+                        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Golden Retriever outdoors" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="w-full md:w-1/2 p-10 lg:p-16 flex flex-col justify-center">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <span class="text-studio-600 dark:text-studio-400 font-semibold text-sm uppercase tracking-wider">Featured Guide</span>
+                            <span class="text-gray-400 text-sm">October 24, 2026</span>
+                        </div>
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-6 hover:text-studio-600 dark:hover:text-studio-400 transition-colors cursor-pointer">How to Prepare Your Dog for an Outdoor Photography Session</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">Outdoor sessions offer beautiful natural light and a playground for your dog. But they also come with distractions. Here's our comprehensive guide to getting your pup ready for their big day out.</p>
+                        
+                        <div class="space-y-3 mb-8 text-sm text-gray-700 dark:text-gray-300">
+                            <div class="flex items-start">
+                                <i class="fas fa-paw text-studio-500 mt-1 mr-3"></i>
+                                <span><strong>Exercise beforehand:</strong> Why a tired dog is a photogenic dog.</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-paw text-studio-500 mt-1 mr-3"></i>
+                                <span><strong>Pack the right treats:</strong> High-value rewards for capturing attention.</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-paw text-studio-500 mt-1 mr-3"></i>
+                                <span><strong>Grooming tips:</strong> Keeping them looking their best in the wild.</span>
+                            </div>
+                        </div>
+
+                        <a href="#" class="inline-block bg-studio-900 dark:bg-white text-white dark:text-neutral-900 px-8 py-3 rounded-full font-medium hover:bg-studio-800 dark:hover:bg-gray-200 transition-colors w-max">Read the Article</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Articles Grid -->
+        <section class="py-16 bg-white dark:bg-neutral-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-3xl font-bold mb-12">Latest Stories</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <!-- Article Card 1 -->
+                    <div class="group bg-gray-50 dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-100 dark:border-neutral-800 hover:shadow-lg transition-all duration-300 flex flex-col">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cat in studio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-studio-600 dark:text-studio-400 text-xs font-bold uppercase">Studio Secrets</span>
+                                <span class="text-gray-400 text-xs">Oct 18, 2026</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3 group-hover:text-studio-600 dark:group-hover:text-studio-400 transition-colors">Lighting Techniques for Black Cats</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 line-clamp-3">Photographing black fur can be challenging. Discover how we use rim lighting to capture the beautiful texture of dark-coated feline friends.</p>
+                            <a href="#" class="text-studio-600 dark:text-studio-400 font-semibold text-sm hover:underline flex items-center mt-auto">Read More <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Article Card 2 -->
+                    <div class="group bg-gray-50 dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-100 dark:border-neutral-800 hover:shadow-lg transition-all duration-300 flex flex-col">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Puppy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-studio-600 dark:text-studio-400 text-xs font-bold uppercase">Client Spotlight</span>
+                                <span class="text-gray-400 text-xs">Oct 10, 2026</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3 group-hover:text-studio-600 dark:group-hover:text-studio-400 transition-colors">Meet Barnaby: A Rescue Story</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 line-clamp-3">See the heartwarming gallery from our recent session with Barnaby, a rescue pup who found his forever home just in time for the holidays.</p>
+                            <a href="#" class="text-studio-600 dark:text-studio-400 font-semibold text-sm hover:underline flex items-center mt-auto">Read More <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Article Card 3 -->
+                    <div class="group bg-gray-50 dark:bg-neutral-950 rounded-2xl overflow-hidden border border-gray-100 dark:border-neutral-800 hover:shadow-lg transition-all duration-300 flex flex-col">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1501820488136-72669149e0d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dog owners" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 flex-1 flex flex-col">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-studio-600 dark:text-studio-400 text-xs font-bold uppercase">Tips & Tricks</span>
+                                <span class="text-gray-400 text-xs">Oct 02, 2026</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-3 group-hover:text-studio-600 dark:group-hover:text-studio-400 transition-colors">What to Wear to Your Pet's Photo Session</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 line-clamp-3">Coordinating with your furry best friend doesn't have to be hard. Here are our top styling tips for pet parents.</p>
+                            <a href="#" class="text-studio-600 dark:text-studio-400 font-semibold text-sm hover:underline flex items-center mt-auto">Read More <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter CTA -->
+        <section class="py-24 bg-studio-600 dark:bg-studio-900 text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold mb-4">Join the Pack</h2>
+                <p class="text-studio-100 mb-8 text-lg">Subscribe to our newsletter for exclusive photography tips, studio updates, and seasonal mini-session announcements.</p>
+                <form class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <input type="email" placeholder="Enter your email address" class="px-6 py-4 rounded-full w-full sm:w-96 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                    <button type="submit" class="bg-neutral-900 hover:bg-neutral-800 text-white px-8 py-4 rounded-full font-bold transition-colors">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    
+    
+    <footer class="bg-neutral-900 text-white pt-16 pb-8 border-t border-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="space-y-4">
+                    <a href="index.html" class="flex items-center text-2xl font-bold text-white">
+                        <i class="fas fa-paw text-studio-400 mr-2 text-2xl"></i>
+                        Paws & <span class="text-studio-400 ml-1">Pose</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Capturing the unique personality and soul of your beloved pets through premium studio and lifestyle photography.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-pinterest text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors text-sm">Home</a>
+                    </li>
+                        <li><a href="home-2.html" class="text-gray-400 hover:text-white transition-colors text-sm">Editorial Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors text-sm">About Us</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors text-sm">Journal</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Studio Sessions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Outdoor Adventures</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Puppy Milestones</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Fine Art Prints</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-400 text-sm">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-studio-400"></i>
+                            123 Creative Studio Ave,<br>Art District, NY 10001
+                        </li>
+                        <li class="flex items-center text-gray-400 text-sm">
+                            <i class="fas fa-phone mr-3 text-studio-400"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li class="flex items-center text-gray-400 text-sm">
+                            <i class="fas fa-envelope mr-3 text-studio-400"></i>
+                            hello@pawspose.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-neutral-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 Paws & Pose Photography. All rights reserved.</p>
+                <div class="space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <button id="back-to-top" class="hidden fixed bottom-8 right-8 z-50 bg-studio-600 hover:bg-studio-700 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-transform hover:-translate-y-1 focus:outline-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="script.js"></script>
+
+</body>
+</html>
